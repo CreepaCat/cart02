@@ -10,6 +10,11 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <body>
+<c:if test="${!empty user}">
+    <div align="center">
+        当前用户: ${user.name}
+    </div>
+</c:if>
     <table align="center" border="1" cellpadding="0">
         <tr>
             <td>id</td>

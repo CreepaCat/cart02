@@ -13,6 +13,7 @@ import java.util.List;
 
 @WebServlet(name = "ProductListServlet")
 public class ProductListServlet extends HttpServlet {
+    //protected void soGet(){}
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 

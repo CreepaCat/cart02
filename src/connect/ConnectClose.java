@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectClose {
-    public void ConnectClose(Connection conn, PreparedStatement psmt, ResultSet rs){
+    public  ConnectClose(Connection conn, PreparedStatement psmt, ResultSet rs){
         try{
             if(rs != null){
                 rs.close();

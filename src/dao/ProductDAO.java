@@ -23,7 +23,7 @@ public class ProductDAO {
     public List<Product> ListProduct(){
         List<Product> products = new ArrayList<Product>();
 
-        ConnectClose close = new ConnectClose();
+        //ConnectClose close = new ConnectClose();
 
         String sql = "select * from product order by id desc";
         try {
@@ -40,7 +40,7 @@ public class ProductDAO {
         }catch (SQLException e){
             e.printStackTrace();
         }finally {
-            close.ConnectClose(conn, psmt, rs);
+            new ConnectClose(conn, psmt, rs);
         }
         return products;
     }
