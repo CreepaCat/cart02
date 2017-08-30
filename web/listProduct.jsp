@@ -18,9 +18,9 @@
     <table align="center" border="1" cellpadding="0">
         <tr>
             <td>id</td>
-            <td>name</td>
-            <td>price</td>
-            <td>数量</td>
+            <td>品名</td>
+            <td>价格</td>
+            <td>购买</td>
         </tr>
         <c:forEach items="${products}" var = "product" varStatus ="st">
             <tr>

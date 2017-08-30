@@ -1,7 +1,8 @@
 package servlet;
 
 import bean.User;
-import dao.UserVerifyDAO;
+import dao.UserDAO;
+//import dao.UserVerifyDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,9 +13,9 @@ import java.io.IOException;
 
 @WebServlet(name = "UserLoginServlet")
 public class UserLoginServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       User user = new User();
-      UserVerifyDAO uv = new UserVerifyDAO();
+      UserDAO uv = new UserDAO();
       user.setName(request.getParameter("name"));
       user.setPassword(request.getParameter("password"));
       if(uv.verify(user)){
