@@ -21,6 +21,7 @@
             <td>品名</td>
             <td>价格</td>
             <td>购买</td>
+            <td>删除</td>
         </tr>
         <c:forEach items="${products}" var = "product" varStatus ="st">
             <tr>
@@ -35,12 +36,15 @@
                         <input type="submit" value="购买">
                     </form>
                 </td>
+                <td>
+                    <form action="removeOrderItem" method="post">
+                        <input type="hidden" name="pid" value="${product.id}">
+                        <input type="submit" value="删除">
+                    </form>
+                </td>
 
             </tr>
         </c:forEach>
-        <tr>
-
-        </tr>
     </table>
 
 </body>

@@ -39,4 +39,22 @@
         <servlet-name>OrderItemListServlet</servlet-name>
         <url-pattern>/listOrderItem</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderItemRemoveServlet</servlet-name>
+        <servlet-class>servlet.OrderItemRemoveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderItemRemoveServlet</servlet-name>
+        <url-pattern>/removeOrderItem</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderCreateServlet</servlet-name>
+        <servlet-class>servlet.OrderCreateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderCreateServlet</servlet-name>
+        <url-pattern>/createOrder</url-pattern>
+    </servlet-mapping>
 </web-app>

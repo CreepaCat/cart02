@@ -24,4 +24,11 @@
             <td>${oi.num*oi.product.price}</td>
         </tr>
     </c:forEach>
+    <c:if test="${!empty ois}">
+        <tr>
+            <td colspan="4" align="right">
+                <a href="/createOrder">生成订单</a>
+            </td>
+        </tr>
+    </c:if>
 </table>

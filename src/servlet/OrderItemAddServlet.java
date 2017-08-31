@@ -20,7 +20,7 @@ public class OrderItemAddServlet extends HttpServlet{
                  throws ServletException,IOException {
         int num = Integer.parseInt(request.getParameter("num"));
         int pid =Integer.parseInt(request.getParameter("pid"));
-        //没DAO出product
+        //没DAO出product,错误原因已解决，ProductDAO.getProduct()出错
         Product product = new ProductDAO().getProduct(pid);
         OrderItem oi = new OrderItem();
        // oi.setId(pid);
@@ -39,8 +39,8 @@ public class OrderItemAddServlet extends HttpServlet{
         //遍历
         boolean found = false;
         for (OrderItem o : ois){
-            System.out.println("测试：");
-            System.out.println("o,oi,o.getProduct(),oi.getProduct()"+o+" "+oi+" "+o.getProduct()+" "+oi.getProduct());
+           // System.out.println("测试：");
+           // System.out.println("o,oi,o.getProduct(),oi.getProduct()"+o+" "+oi+" "+o.getProduct()+" "+oi.getProduct());
             if(o.getProduct().getId() == oi.getProduct().getId()){
                 o.setNum(o.getNum() + oi.getNum());
                 found = true;
